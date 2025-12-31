@@ -1667,6 +1667,15 @@ a.desktop-only {
         display: inline-flex !important;
     }
 
+    /* Contact section mobile elements */
+    .contact-item.mobile-only {
+        display: flex !important;
+    }
+
+    .contact-divider.mobile-only {
+        display: block !important;
+    }
+
     .desktop-only {
         display: none !important;
     }
