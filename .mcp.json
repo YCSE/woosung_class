@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "nanobanana-mcp": {
+      "command": "node",
+      "args": ["/Users/roy/Documents/Development/nanobanana-mcp/dist/index.js"],
+      "env": {
+        "GOOGLE_AI_API_KEY": "AIzaSyAmpRx3oNkPbq40OVHbz9LWXCcz9z8S3bI"
+      }
+    },
+     "chrome-devtools": {
+      "command": "npx",
+      "args": ["chrome-devtools-mcp@latest"]
+    }
+  }
+}
