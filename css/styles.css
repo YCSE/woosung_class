@@ -1045,6 +1045,64 @@ div.cta-button:hover .cta-number {
     line-height: 1.8;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   PORTFOLIO CTA - Instagram Link
+   ═══════════════════════════════════════════════════════════════ */
+
+.portfolio-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    background: transparent;
+    border: 2px solid var(--gold-primary);
+    color: var(--gold-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: all 0.4s var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gold-gradient);
+    transition: left 0.5s var(--transition-smooth);
+    z-index: -1;
+}
+
+.instagram-link i {
+    font-size: 1.4rem;
+    transition: transform 0.4s var(--transition-smooth);
+}
+
+.instagram-link:hover {
+    color: var(--charcoal-deep);
+    border-color: var(--gold-light);
+    box-shadow: var(--gold-glow);
+    transform: translateY(-3px);
+}
+
+.instagram-link:hover::before {
+    left: 0;
+}
+
+.instagram-link:hover i {
+    transform: scale(1.2);
+}
+
 /* Product Grid Responsive */
 @media (max-width: 1024px) {
     .product-grid {
@@ -1616,6 +1674,32 @@ div.cta-button:hover .cta-number {
     font-size: 1.1rem;
     margin-top: 0;
     letter-spacing: 10px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--gold-dark);
+    border-radius: 50%;
+    color: var(--gold-primary);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.footer-social a:hover {
+    background: var(--gold-gradient);
+    color: var(--charcoal-deep);
+    border-color: var(--gold-primary);
+    box-shadow: var(--gold-glow);
+    transform: scale(1.1);
 }
 
 .footer-copy {
