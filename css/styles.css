@@ -513,6 +513,36 @@ body.door-opening {
     transform: translateX(8px);
 }
 
+/* Desktop CTA - Phone Number Display */
+.cta-number {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--gold-light);
+    transition: all 0.4s var(--transition-smooth);
+}
+
+div.cta-button {
+    cursor: default;
+    flex-direction: column;
+    gap: 8px;
+}
+
+div.cta-button .cta-text {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    opacity: 0.8;
+}
+
+div.cta-button:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+div.cta-button:hover .cta-number {
+    text-shadow: var(--gold-text-shadow);
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 50px;
@@ -1430,6 +1460,71 @@ body.door-opening {
     width: 100%;
 }
 
+/* Desktop Phone Text */
+.phone-text {
+    color: var(--gold-primary);
+    text-shadow: var(--gold-text-shadow);
+}
+
+/* Desktop Contact CTA - Large Phone Number Display */
+.contact-cta-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 30px 60px;
+    background: linear-gradient(145deg, var(--charcoal) 0%, var(--charcoal-deep) 100%);
+    border: 2px solid var(--gold-primary);
+    position: relative;
+    transition: all 0.5s var(--transition-smooth);
+}
+
+.contact-cta-desktop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s var(--transition-smooth);
+}
+
+.contact-cta-desktop:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.contact-cta-desktop:hover::before {
+    opacity: 1;
+}
+
+.contact-cta-desktop .cta-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--gray-light);
+    text-transform: uppercase;
+}
+
+.contact-cta-desktop .cta-phone-number {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.contact-cta-desktop:hover .cta-phone-number {
+    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6));
+    transform: scale(1.05);
+}
+
 .contact-cta {
     display: inline-flex;
     align-items: center;
@@ -1534,9 +1629,46 @@ body.door-opening {
    RESPONSIVE DESIGN
    ═══════════════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE VISIBILITY CLASSES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Mobile: 768px and below */
+.mobile-only {
+    display: none !important;
+}
+
+/* Desktop: above 768px */
+.desktop-only {
+    display: block;
+}
+
+/* Inline elements need inline display */
+span.desktop-only,
+a.desktop-only {
+    display: inline;
+}
+
 @media (max-width: 768px) {
+    .mobile-only {
+        display: block !important;
+    }
+
+    /* Inline elements */
+    a.mobile-only,
+    span.mobile-only {
+        display: inline !important;
+    }
+
+    /* Flex elements */
+    .floating-call.mobile-only,
+    .cta-button.mobile-only,
+    .contact-cta.mobile-only {
+        display: inline-flex !important;
+    }
+
     .desktop-only {
-        display: none;
+        display: none !important;
     }
 
     .frame-container {

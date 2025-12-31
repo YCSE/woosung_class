@@ -67,8 +67,8 @@
         <div class="sensor-light"></div>
     </div>
 
-    <!-- Floating Call Button -->
-    <a href="tel:010-5769-0152" class="floating-call" id="floatingCall">
+    <!-- Floating Call Button (Mobile Only) -->
+    <a href="tel:010-5769-0152" class="floating-call mobile-only" id="floatingCall">
         <div class="call-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
@@ -91,8 +91,14 @@
             <p class="hero-slogan">자동문 전문 시공 & 설치</p>
             <div class="hero-divider"></div>
             <p class="hero-sub">정밀한 기술력으로 완성하는<br>프리미엄 자동문 솔루션</p>
-            <a href="tel:010-5769-0152" class="cta-button">
-                <span class="cta-text">지금 문의하기</span>
+            <!-- Desktop: Show phone number -->
+            <div class="cta-button desktop-only">
+                <span class="cta-text">전화 문의</span>
+                <span class="cta-number">010-5769-0152</span>
+            </div>
+            <!-- Mobile: Tap to call -->
+            <a href="tel:010-5769-0152" class="cta-button mobile-only">
+                <span class="cta-text">지금 전화하기</span>
                 <span class="cta-arrow">→</span>
             </a>
         </div>
@@ -291,12 +297,21 @@
                         <div class="contact-divider"></div>
                         <div class="contact-item contact-phone">
                             <span class="contact-label">전화</span>
-                            <a href="tel:010-5769-0152" class="contact-value phone-link">
+                            <!-- Desktop: Plain text -->
+                            <span class="contact-value phone-text desktop-only">010-5769-0152</span>
+                            <!-- Mobile: Tap to call -->
+                            <a href="tel:010-5769-0152" class="contact-value phone-link mobile-only">
                                 010-5769-0152
                             </a>
                         </div>
                     </div>
-                    <a href="tel:010-5769-0152" class="contact-cta">
+                    <!-- Desktop: Display number prominently -->
+                    <div class="contact-cta-desktop desktop-only">
+                        <span class="cta-label">전화 문의</span>
+                        <span class="cta-phone-number">010-5769-0152</span>
+                    </div>
+                    <!-- Mobile: Tap to call button -->
+                    <a href="tel:010-5769-0152" class="contact-cta mobile-only">
                         <span>전화 문의하기</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
